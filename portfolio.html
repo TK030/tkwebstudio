@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - TK Webstudio</title>
+    <meta name="description"
+        content="Bekijk mijn portfolio met websites, webshops, webapplicaties en mobile apps. Voorbeelden van mijn werk voor verschillende klanten.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../images/tkwebstudio_logo_zonder_achtergrond.png"
+                    alt="TK Webstudio Logo"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="../diensten.html">Diensten</a>
+                    <div class="dropdown-content">
+                        <a href="websites.html">Websites</a>
+                        <a href="webshops.html">Webshops</a>
+                        <a href="webapplicaties.html">Webapplicaties</a>
+                        <a href="apps.html">Mobile Apps</a>
+                    </div>
+                </li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../over.html">Over mij</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="https://calendly.com/taha2006/30min" target="_blank" class="cta-btn">💬 Plan een
+                        gesprek</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Portfolio</h1>
+            <p>Een selectie van mijn werk - van websites tot complexe webapplicaties</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Portfolio</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-3">
+                <button class="btn btn-secondary" onclick="filterPortfolio('all')" style="margin: 0.5rem;">Alle
+                    projecten</button>
+                <button class="btn btn-secondary" onclick="filterPortfolio('website')"
+                    style="margin: 0.5rem;">Websites</button>
+                <button class="btn btn-secondary" onclick="filterPortfolio('webshop')"
+                    style="margin: 0.5rem;">Webshops</button>
+                <button class="btn btn-secondary" onclick="filterPortfolio('webapp')"
+                    style="margin: 0.5rem;">Webapplicaties</button>
+                <button class="btn btn-secondary" onclick="filterPortfolio('app')" style="margin: 0.5rem;">Mobile
+                    Apps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid-3">
+                <!-- Website Projects -->
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">Corporate Website</div>
+                    <div class="portfolio-content">
+                        <h3>Advocatenkantoor Van der Berg</h3>
+                        <p>Professionele website met case studies, team pagina's en contactformulieren. 60% meer leads
+                            binnen 3 maanden na lancering.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <a href="portfolio/advocatenkantoor.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">Restaurant Website</div>
+                    <div class="portfolio-content">
+                        <h3>Restaurant De Gouden Lepel</h3>
+                        <p>Moderne restaurant website met online menukaart, reserveringssysteem en fotogalerij.
+                            Mobiel-geoptimaliseerd design.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Booking System</span>
+                            <span class="tag">Mobile First</span>
+                        </div>
+                        <a href="portfolio/restaurant.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <!-- Webshop Projects -->
+                <div class="portfolio-item" data-category="webshop">
+                    <div class="portfolio-image">Fashion E-commerce</div>
+                    <div class="portfolio-content">
+                        <h3>Boutique Fashion Store</h3>
+                        <p>Complete fashion webshop met productcatalogus, size guide, wishlist functionaliteit en
+                            integratie met sociale media.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Social Media</span>
+                        </div>
+                        <a href="portfolio/fashion-store.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="webshop">
+                    <div class="portfolio-image">Electronics Store</div>
+                    <div class="portfolio-content">
+                        <h3>TechGadgets Webshop</h3>
+                        <p>Elektronicawinkel met geavanceerde filteropties, product vergelijking en geautomatiseerd
+                            voorraadbeheer.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Shopify</span>
+                            <span class="tag">API Integration</span>
+                            <span class="tag">Inventory</span>
+                        </div>
+                        <a href="portfolio/electronics.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <!-- Web Application Projects -->
+                <div class="portfolio-item" data-category="webapp">
+                    <div class="portfolio-image">CRM Dashboard</div>
+                    <div class="portfolio-content">
+                        <h3>SalesPro CRM Systeem</h3>
+                        <p>Maatwerk CRM voor sales team met lead tracking, pipeline management en geautomatiseerde
+                            rapportages.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <a href="portfolio/crm-system.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="webapp">
+                    <div class="portfolio-image">Booking Platform</div>
+                    <div class="portfolio-content">
+                        <h3>MediBook Afspraken Systeem</h3>
+                        <p>Online afspraken systeem voor medische praktijk met kalender integratie, automatische
+                            herinneringen en patiënt portal.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Calendar API</span>
+                            <span class="tag">Email Automation</span>
+                        </div>
+                        <a href="portfolio/booking-system.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <!-- Mobile App Projects -->
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">Fitness Tracking App</div>
+                    <div class="portfolio-content">
+                        <h3>FitTracker Mobile App</h3>
+                        <p>Cross-platform fitness app met workout tracking, progress monitoring en social features.
+                            5000+ downloads in eerste maand.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Push Notifications</span>
+                        </div>
+                        <a href="portfolio/fitness-app.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">Food Delivery App</div>
+                    <div class="portfolio-content">
+                        <h3>LocalEats Delivery App</h3>
+                        <p>Food delivery app voor lokale restaurants met real-time tracking, betalingsintegratie en
+                            rating systeem.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Google Maps</span>
+                            <span class="tag">Payment Gateway</span>
+                        </div>
+                        <a href="portfolio/delivery-app.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+
+                <!-- Additional Projects -->
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">Non-Profit Website</div>
+                    <div class="portfolio-content">
+                        <h3>Stichting Groene Toekomst</h3>
+                        <p>Website voor milieu-organisatie met donatie functionaliteit, vrijwilligers portal en event
+                            management systeem.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Donations</span>
+                            <span class="tag">Events</span>
+                        </div>
+                        <a href="portfolio/non-profit.html" class="btn btn-primary mt-1">Bekijk project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Wat klanten zeggen</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"TK heeft een prachtige website voor ons
+                        advocatenkantoor gebouwd. Professioneel, snel en precies wat we nodig hadden. Onze online
+                        aanvragen zijn met 60% gestegen!"</p>
+                    <strong>- Mr. J. van der Berg, Advocatenkantoor</strong>
+                </div>
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"De webshop die TK voor ons heeft ontwikkeld
+                        werkt perfect. Gebruiksvriendelijk voor onze klanten en eenvoudig voor ons om te beheren.
+                        Aanrader!"</p>
+                    <strong>- Sarah M., Boutique Fashion Store</strong>
+                </div>
+                <div class="card">
+                    <p style="font-style: italic; margin-bottom: 1rem;">"Ons CRM systeem heeft onze sales processen
+                        volledig geoptimaliseerd. TK denkt mee en levert kwaliteit. Zeer tevreden met de samenwerking."
+                    </p>
+                    <strong>- Mark R., SalesPro</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary" style="background: var(--primary-color); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white;">Wil jij ook zo'n project?</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Laten we bespreken hoe ik jouw digitale
+                ambities kan waarmaken.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary" style="background: var(--accent-color);">Start je
+                    project</a>
+                <a href="over.html" class="btn btn-secondary" style="border-color: white; color: white;">Leer mij
+                    kennen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TK Webstudio</h3>
+                    <p>Maatwerk websites, webshops en apps die presteren en groeien.</p>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">💼</a>
+                        <a href="#" title="GitHub">💻</a>
+                        <a href="#" title="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Diensten</h3>
+                    <ul>
+                        <li><a href="diensten/websites.html">Websites</a></li>
+                        <li><a href="diensten/webshops.html">Webshops</a></li>
+                        <li><a href="diensten/webapplicaties.html">Webapplicaties</a></li>
+                        <li><a href="diensten/apps.html">Mobile Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Bedrijf</h3>
+                    <ul>
+                        <li><a href="over.html">Over mij</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 info@tkwebstudio.nl</p>
+                    <p>📱 +31 6 12 34 56 78</p>
+                    <p>⏰ Ma-Vr: 9:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> TK Webstudio. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
