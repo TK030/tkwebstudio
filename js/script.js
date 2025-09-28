@@ -122,3 +122,72 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true
     });
 });
+
+// ===== DARK/LIGHT MODE TOGGLE WITH LOCALSTORAGE =====
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('mode-toggle');
+    const body = document.body;
+
+    // Check if toggle element exists
+    if (!toggle) {
+        console.error("Toggle element with id 'mode-toggle' not found!");
+        return;
+    }
+
+    // Initialize theme on page load
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            // User has previously set a preference - use that
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                toggle.checked = true;
+            } else {
+                body.classList.remove('dark-mode');
+                toggle.checked = false;
+            }
+        } else {
+            // No saved preference - check system preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (prefersDark) {
+                body.classList.add('dark-mode');
+                toggle.checked = true;
+            } else {
+                body.classList.remove('dark-mode');
+                toggle.checked = false;
+            }
+        }
+    }
+
+    // Toggle event listener
+    toggle.addEventListener('change', function () {
+        if (this.checked) {
+            // Switch to dark mode and save preference
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            // Switch to light mode and save preference
+            body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Listen for system theme changes (only if user hasn't set manual preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        // Only auto-switch if user hasn't manually set a preference
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                body.classList.add('dark-mode');
+                toggle.checked = true;
+            } else {
+                body.classList.remove('dark-mode');
+                toggle.checked = false;
+            }
+        }
+    });
+
+    // Initialize theme
+    initTheme();
+});
