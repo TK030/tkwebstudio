@@ -17,7 +17,7 @@ TK_Webstudio_Website/
 │   ├── websites.html      # Websites dienst detail
 │   ├── webshops.html      # Webshops dienst detail
 │   ├── webapplicaties.html # Webapplicaties dienst detail
-│   └── apps.html          # Mobile Apps dienst detail
+│
 └── portfolio/
     └── advocatenkantoor.html # Voorbeeld case study
 ```
@@ -62,7 +62,6 @@ TK_Webstudio_Website/
 - **Websites** - Pakketten, technologieën, proces
 - **Webshops** - E-commerce oplossingen, features, platforms
 - **Webapplicaties** - Maatwerk oplossingen, use cases
-- **Mobile Apps** - iOS/Android development, app types
 
 #### Portfolio:
 - **Case Study Voorbeeld** - Advocatenkantoor project met resultaten

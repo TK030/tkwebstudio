@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     new Typed(".typed-text", {
-        strings: ["Websites", "Webshops", "Apps"],
+        strings: ["Websites", "Webshops", "Webapps"],
         typeSpeed: 80,
         backSpeed: 50,
         backDelay: 1500,
